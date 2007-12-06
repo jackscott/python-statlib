@@ -4,3 +4,12 @@
 = Proposed Tasks =
  
 == Create a package from several standalone statistical packages ==
+
+Combine the statistical modules stat.py, pstat.py and matfunc.py into a single package called statlib. Write a distutil based setup script (`setup.py`) that can be used to install the package in the standard way (`python setup.py install`). Make your setup script able publish this package via [http://cheeseshop.python.org/pypi Python Package Index].
+
+Write a wiki page on this site that lists the functions available in stat.py and matfunc.py.
+
+
+Resources:
+  * [http://docs.python.org/dist/dist.html Distributing Python Modules] documentation page
+  * See the [http://www.astro.cornell.edu/staff/loredo/statpy/ Statistical Computing with Python] page on how to find the libraries. 
