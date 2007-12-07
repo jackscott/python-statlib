@@ -2,11 +2,12 @@
 
 = Getting Started =
 
-  * Students must familiarize themselves with the [http://subversion.tigris.org/ subversion] revision control system. All code needs to be submitted and maintained via *svn* and this google project. Best starting points are the [http://svnbook.red-bean.com/ Subversion Book] and a [http://www.developer.com/tech/article.php/10923_3499816_2 Crash Course in Subversion]
-
   * Visit the [http://code.google.com/p/google-highly-open-participation-psf/issues/list issue tracker] and pick a statlib task (if there is one available).
 
   * Request membership to this project (you'll need to have a google account). Once your task is approved and assigned to you we will add you as a member (within a day or so).
+
+ * It would be most helpful if students familiarized themselves with the [http://subversion.tigris.org/ subversion] revision control system. Eventually all code needs to be submitted and maintained via *svn* and this google project. Best starting points are the [http://svnbook.red-bean.com/ Subversion Book] and a [http://www.developer.com/tech/article.php/10923_3499816_2 Crash Course in Subversion]. On Unix type sytems the command line `svn` client works very well. For windows users [http://tortoisesvn.tigris.org/ TortoiseSVN] seems to be a popular choice.
+
 
 ==  Resources ==
 
