@@ -16,4 +16,4 @@ Resources:
 
   * Matfunc http://users.rcn.com/python/download/python.htm
 
-  * See the [http://www.astro.cornell.edu/staff/loredo/statpy/ Statistical Computing with Python] page on how to find the libraries. 
+  * See the [http://www.astro.cornell.edu/staff/loredo/statpy/ Statistical Computing with Python] page other  libraries. 
