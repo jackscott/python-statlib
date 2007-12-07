@@ -5,7 +5,7 @@
  
 == Create a package from several standalone statistical packages ==
 
-Combine the statistical modules stat.py, pstat.py and matfunc.py into a single package called statlib. Write a distutil based setup script (`setup.py`) that can be used to install the package in the standard way (`python setup.py install`). Make your setup script able to publish this package via the [http://cheeseshop.python.org/pypi Python Package Index].
+Combine the statistical modules `stats.py`, `pstat.py` and `matfunc.py` into a single package called `statlib`. Write a distutil based setup script (`setup.py`) that can be used to install the package in the standard way (`python setup.py install`). Make your setup script able to publish this package via the [http://cheeseshop.python.org/pypi Python Package Index].
 
 Write a wiki page on this site that lists the functions available in stat.py and matfunc.py.
 
