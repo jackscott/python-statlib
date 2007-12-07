@@ -10,4 +10,8 @@
 
 ==  Resources ==
 
+  * stats.py, pstat.py, statstest.zip: http://www.astro.cornell.edu/staff/loredo/statpy/ 
+
+  * Matfunc: http://users.rcn.com/python/download/python.htm
+
   * [http://www.astro.cornell.edu/staff/loredo/statpy/ Statistical Computing with Python] 
