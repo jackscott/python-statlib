@@ -15,7 +15,7 @@ print stats.amean.__doc__ or whatever.
 }}}
 
 
-==stats Function List==
+== Function List ==
   * === lF_oneway ===
   {{{
 Performs a 1-way ANOVA, returning an F-value and probability given
