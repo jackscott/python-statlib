@@ -1,5 +1,5 @@
 
-import stats, pstat, io, anova
+from statlib import stats, pstat, io, anova
 reload(stats)
 
 d=io.get('p89md.txt')

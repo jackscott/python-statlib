@@ -1,7 +1,6 @@
-import stats
+from statlib import stats, pstat
 reload(stats)
 from Numeric import *
-import pstat
 reload(pstat)
 import statshelp
 
