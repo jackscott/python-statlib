@@ -18,7 +18,7 @@ setup(
     maintainer_email='istvan.albert@gmail.com',
     url='http://python-statlib.googlecode.com/',
     download_url="",
-    packages = ["statlib"],
+    packages = [ "statlib" ],
     classifiers=[
        'Development Status :: 5 - Production/Stable',
        'License :: OSI Approved :: GNU General Public License (GPL)',
