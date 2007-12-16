@@ -1,0 +1,27 @@
+== matfunc.py ==
+
+Basic Table, Matrix and Vector functions for Python 2.2
+License:  Public Domain     Author:   Raymond Hettinger email:  python@rcn.com
+Updates and documentation:  http://users.rcn.com/python/download/python.htm
+
+== pstat.py, stats.py ==
+
+Copyright (c) 1999-2002 Gary Strangman; All Rights Reserved.
+
+This software is distributable under the terms of the GNU
+General Public License (GPL) v2, the text of which can be found at
+http://www.gnu.org/copyleft/gpl.html. Installing, importing or otherwise
+using this module constitutes acceptance of the terms of this License.
+
+Disclaimer
+ 
+This software is provided "as-is".  There are no expressed or implied
+warranties of any kind, including, but not limited to, the warranties
+of merchantability and fittness for a given application.  In no event
+shall Gary Strangman be liable for any direct, indirect, incidental,
+special, exemplary or consequential damages (including, but not limited
+to, loss of use, data or profits, or business interruption) however
+caused and on any theory of liability, whether in contract, strict
+liability or tort (including negligence or otherwise) arising in any way
+out of the use of this software, even if advised of the possibility of
+such damage.
