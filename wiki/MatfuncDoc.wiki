@@ -1,4 +1,5 @@
-=matfunc.py=
+#summary documentation for the matfunc module
+
 ==matfunc Function List==
   * === zeroes ===
   {{{Zero matrix with side length m-by-m or m-by-n.}}}
@@ -34,4 +35,3 @@
 
   * === ratfit ===
   {{{Solves design matrix for approximating rational polynomial coefficients (a*x**2 + b*x + c)/(d*x**2 + e*x + 1)}}}
-
