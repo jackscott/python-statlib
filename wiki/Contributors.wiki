@@ -18,4 +18,4 @@ Copyright (c) 1999-2002 Gary Strangman; All Rights Reserved
 
 == Maintainers ==
 
-... add you name here ...
+ * Istvan Albert - [http://www.personal.psu.edu/iua1/ homepage]
