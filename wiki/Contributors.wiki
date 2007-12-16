@@ -1,3 +1,15 @@
 #summary One-sentence summary of this page.
 
 = Contributors =
+
+== Original authors ==
+
+=== matfunc.py ===
+'''Basic Table, Matrix and Vector functions for Python 2.2
+   License:  Public Domain     Author:   Raymond Hettinger email:  python@rcn.com
+   Updates and documentation:  http://users.rcn.com/python/download/python.htm
+   Revision In Use:  'File %n, Ver %v, Date %f'                             '''
+Version = 'File MATFUNC.PY, Ver 183, Date 12-Dec-2002,14:33:42'
+
+=== pstat.py, stats.py ===
+Copyright (c) 1999-2002 Gary Strangman; All Rights Reserved.
