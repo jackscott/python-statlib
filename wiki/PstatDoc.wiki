@@ -1,4 +1,5 @@
-=pstat.py=
+#summary documentation for the pstat module
+
 ==Pstat Function List==
   * === duplicates ===
   {{{
@@ -266,4 +267,3 @@ sortcols.
 Usage:   sortby(listoflists,sortcols)
 Returns: sorted list, unchanged column ordering
 }}}
-
