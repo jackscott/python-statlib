@@ -1,6 +1,9 @@
 #summary documentation for the stats module
 
 ==stats Class List==
+
+A collection of basic statistical functions for python.
+
   * === Dispatch ===
   {{{
 The Dispatch class, care of David Ascher, allows different functions to
