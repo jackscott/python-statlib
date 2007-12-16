@@ -1,6 +1,12 @@
 #summary documentation for the pstat module
 
 ==Pstat Function List==
+
+This module provides some useful list and array manipulation routines
+modeled after those found in the |Stat package by Gary Perlman, plus a
+number of other useful list/file manipulation functions.  The list-based
+functions include:
+
   * === duplicates ===
   {{{
 Returns duplicate items in the FIRST dimension of the passed list.
