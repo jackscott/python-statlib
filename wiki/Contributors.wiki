@@ -3,9 +3,9 @@
 
 == Original authors ==
 
- * *matfunc.py* Basic Table, Matrix and Vector functions for Python 2.2 License:  Public Domain     Author:   Raymond Hettinger email:  python@rcn.com Updates and documentation:  http://users.rcn.com/python/download/python.htm Version = 'File MATFUNC.PY, Ver 183, Date 12-Dec-2002,14:33:42'
+ * *matfunc.py* by Raymond Hettinger. Basic Table, Matrix and Vector functions for Python 2.2 Project homepage:  http://users.rcn.com/python/download/python.htm 
 
- * *pstat.py*, *stats.py* Home page: http://www.nmr.mgh.harvard.edu/Neural_Systems_Group/gary/python.html Copyright (c) 1999-2002 Gary Strangman; All Rights Reserved
+ * *pstat.py*, *stats.py* by Gary Strangman Project homepage: http://www.nmr.mgh.harvard.edu/Neural_Systems_Group/gary/python.html 
 
 == Contributors ==
 
@@ -14,3 +14,7 @@
 == Maintainers ==
 
  * Istvan Albert - [http://www.personal.psu.edu/iua1/ homepage]
+
+== Change Log ==
+
+ * Dec 17, 2007 - Created the project as a GHOP task
