@@ -10,7 +10,7 @@
 
 == Contributors ==
 
- * Robert - [average.programmer@gmail.com] GHOP student
+ * Robert - [average.programmer@gmail.com] GHOP student - created the package structure, installer, extracted documentation as wiki pages
 
 == Maintainers ==
 
