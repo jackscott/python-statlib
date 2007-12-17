@@ -1,5 +1,6 @@
-#summary One-sentence summary of this page.
+#summary list of contributors.
 
+= Credits =
 
 == Original authors ==
 
@@ -15,6 +16,6 @@
 
  * Istvan Albert - [http://www.personal.psu.edu/iua1/ homepage]
 
-== Change Log ==
+= Change Log =
 
  * Dec 17, 2007 - Created the project as a GHOP task
