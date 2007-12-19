@@ -2,6 +2,9 @@ include README.txt
 include COPYRIGHT.txt
 include MANIFEST.in
 
-recursive-include docs *.*
-recursive-include misc *.*
-recursive-include test *.*
+recursive-include docs *.html
+recursive-include misc *.py
+recursive-include test *.py
+recursive-include test/data *.py *.txt *.TXT
+
+
