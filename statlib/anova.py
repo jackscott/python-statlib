@@ -1,11 +1,10 @@
 if 1:
- import Numeric
- N=Numeric
+ import numpy as N
  from statlib import pstat, stats
  from pstat import *
  from stats import *
- import LinearAlgebra, operator, math
- LA = LinearAlgebra
+ from numpy import linalg as LA
+ import operator, math
 
  def aanova(data,effects=['A','B','C','D','E','F','G','H','I','J','K']):
     """
@@ -52,7 +51,8 @@ lists-of-lists.
 
     print
     variables = 1       # this function only handles one measured variable
-    if type(data)==N.ArrayType:
+    
+    if type(data)!=type([]):
         data = data.tolist()
 
 ## Create a list of all unique values in each column, and a list of these Ns
