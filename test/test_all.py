@@ -38,6 +38,18 @@ class TestStatlib(unittest.TestCase):
         for datum in data :
             self.EQ( stats.harmonicmean( datum ), 5.559, 3)
 
+    def test_mean(self):
+        "Testing mean"
+        data = [ self.L, self.LF, self.A, self.AF  ]
+        for datum in data :
+            self.EQ( stats.mean( datum ), 10.5, 3)
+
+    def test_median(self):
+        "Testing median"
+        data = [ self.L, self.LF, self.A, self.AF  ]
+        for datum in data :
+            self.assertTrue( 10 < stats.median( datum ) < 11 )
+
 def get_suite():
     suite = unittest.TestLoader().loadTestsFromTestCase( TestStatlib )
     return suite
