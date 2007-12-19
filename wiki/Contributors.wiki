@@ -15,7 +15,3 @@
 == Maintainers ==
 
  * Istvan Albert - [http://www.personal.psu.edu/iua1/ homepage]
-
-= Change Log =
-
- * Dec 17, 2007 - Created the project as a GHOP task
