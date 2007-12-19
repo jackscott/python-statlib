@@ -1,7 +1,7 @@
 # Copyright (c) Gary Strangman.  All rights reserved
 #
 # Disclaimer
-# 
+#
 # This software is provided "as-is".  There are no expressed or implied
 # warranties of any kind, including, but not limited to, the warranties
 # of merchantability and fittness for a given application.  In no event
@@ -163,7 +163,7 @@ Returns: a 1D or 2D list of lists from whitespace delimited text files
             fnames = fnames + glob.glob(item)
     else:
         fnames = glob.glob(namepatterns)
-        
+
     if len(fnames) == 0:
         if verbose:
             print 'NO FILENAMES MATCH ('+namepatterns+') !!'
@@ -335,7 +335,7 @@ Usage:   bget(imfile,shp=None,unpackstr=N.int16,bytesperpixel=2.0,sliceinit=0)
     if imfile[-2:] == 'MR':
         return mrget(imfile,unpackstr)
     if imfile[-4:] == 'BRIK':
-        return brikget(imfile,unpackstr,shp) 
+        return brikget(imfile,unpackstr,shp)
     if imfile[-3:] in ['mnc','MNC']:
         return mincget(imfile,unpackstr,shp)
     if imfile[-3:] == 'img':
@@ -380,7 +380,7 @@ Usage:  mincget(imfile,unpackstr=N.int16,shp=None)  default shp = -1,20,64,64
     d.shape = shp
     os.system('rm minctemp.bshort')
     return d
-    
+
 
 def brikget(imfile,unpackstr=N.int16,shp=None):
     """
