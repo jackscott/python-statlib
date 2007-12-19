@@ -60,9 +60,9 @@ except:
     pass
 
 import pstat
-import glob, re, string, types, os, Numeric, struct, copy, time, tempfile, sys
+import glob, re, string, types, os, numpy, struct, copy, time, tempfile, sys
 from types import *
-N = Numeric
+N = numpy
 
 __version__ = 0.5
 
@@ -321,14 +321,14 @@ Returns: None
     return None
 
 
-def bget(imfile,shp=None,unpackstr=N.Int16,bytesperpixel=2.0,sliceinit=0):
+def bget(imfile,shp=None,unpackstr=N.int16,bytesperpixel=2.0,sliceinit=0):
     """
 Reads in a binary file, typically with a .bshort or .bfloat extension.
 If so, the last 3 parameters are set appropriately.  If not, the last 3
 parameters default to reading .bshort files (2-byte integers in big-endian
 binary format).
 
-Usage:   bget(imfile,shp=None,unpackstr=N.Int16,bytesperpixel=2.0,sliceinit=0)
+Usage:   bget(imfile,shp=None,unpackstr=N.int16,bytesperpixel=2.0,sliceinit=0)
 """
     if imfile[:3] == 'COR':
         return CORget(imfile)
@@ -360,11 +360,11 @@ Returns: 2D array of 16-bit ints
     return d
 
 
-def mincget(imfile,unpackstr=N.Int16,shp=None):
+def mincget(imfile,unpackstr=N.int16,shp=None):
     """
 Loads in a .MNC file.
 
-Usage:  mincget(imfile,unpackstr=N.Int16,shp=None)  default shp = -1,20,64,64
+Usage:  mincget(imfile,unpackstr=N.int16,shp=None)  default shp = -1,20,64,64
 """
     if shp == None:
         shp = (-1,20,64,64)
@@ -382,11 +382,11 @@ Usage:  mincget(imfile,unpackstr=N.Int16,shp=None)  default shp = -1,20,64,64
     return d
     
 
-def brikget(imfile,unpackstr=N.Int16,shp=None):
+def brikget(imfile,unpackstr=N.int16,shp=None):
     """
 Gets an AFNI BRIK file.
 
-Usage:  brikget(imfile,unpackstr=N.Int16,shp=None)  default shp: (-1,48,61,51)
+Usage:  brikget(imfile,unpackstr=N.int16,shp=None)  default shp: (-1,48,61,51)
 """
     if shp == None:
         shp = (-1,48,61,51)
@@ -447,7 +447,7 @@ Usage:  brikget(imfile,unpackstr=N.Int16,shp=None)  default shp: (-1,48,61,51)
         return bdata
 
 def mghbget(imfile,numslices=-1,xsize=64,ysize=64,
-           unpackstr=N.Int16,bytesperpixel=2.0,sliceinit=0):
+           unpackstr=N.int16,bytesperpixel=2.0,sliceinit=0):
     """
 Reads in a binary file, typically with a .bshort or .bfloat extension.
 If so, the last 3 parameters are set appropriately.  If not, the last 3
@@ -455,7 +455,7 @@ parameters default to reading .bshort files (2-byte integers in big-endian
 binary format).
 
 Usage:   mghbget(imfile, numslices=-1, xsize=64, ysize=64,
-                unpackstr=N.Int16, bytesperpixel=2.0, sliceinit=0)
+                unpackstr=N.int16, bytesperpixel=2.0, sliceinit=0)
 """
     try:
         file = open(imfile, "rb")
@@ -530,7 +530,7 @@ Opens a binary file, unpacks it, and returns a flat array of the
 type specified.  Use Numeric types ... N.Float32, N.Int64, etc.
 
 Usage:   braw(fname,btype,shp=None)
-Returns: flat array of floats, or ints (if btype=N.Int16)
+Returns: flat array of floats, or ints (if btype=N.int16)
 """
     file = open(fname,'rb')
     bdata = file.read()
@@ -611,7 +611,7 @@ Usage:   mget(fname,btype)
         return N.transpose(d)*1
 
 
-def mput(outarray,fname,writeheader=0,btype=N.Int16):
+def mput(outarray,fname,writeheader=0,btype=N.int16):
     """
 Save a file for use in matlab.
 """
@@ -638,16 +638,16 @@ Save a file for use in matlab.
     return None
 
 
-def bput(outarray,fname,writeheader=0,packtype=N.Int16,writetype='wb'):
+def bput(outarray,fname,writeheader=0,packtype=N.int16,writetype='wb'):
     """
 Writes the passed array to a binary output file, and then closes
 the file.  Default is overwrite the destination file.
 
-Usage:   bput (outarray,filename,writeheader=0,packtype=N.Int16,writetype='wb')
+Usage:   bput (outarray,filename,writeheader=0,packtype=N.int16,writetype='wb')
 """
     suffix = fname[-6:]
     if suffix == 'bshort':
-        packtype = N.Int16
+        packtype = N.int16
     elif suffix == 'bfloat':
         packtype = N.Float32
     else:
@@ -678,12 +678,12 @@ Usage:   bput (outarray,filename,writeheader=0,packtype=N.Int16,writetype='wb')
     return None
 
 
-def mrget(fname,datatype=N.Int16):
+def mrget(fname,datatype=N.int16):
     """
 Opens a binary .MR file and clips off the tail data portion of it, returning
 the result as an array.
 
-Usage:   mrget(fname,datatype=N.Int16)
+Usage:   mrget(fname,datatype=N.int16)
 """
     d = braw(fname,datatype)
     if len(d) > 512*512:
@@ -921,7 +921,7 @@ location. You can force an unpacking type, or else it tries to figure
 it out from the filename (4th-to-last character). Hence, readable file
 formats are ...
 
-1bin=Int8, sbin=Int16, ibin=Int32, fbin=Float32, dbin=Float64, etc.
+1bin=Int8, sbin=int16, ibin=Int32, fbin=Float32, dbin=Float64, etc.
 
 Usage:   binget(fname,btype=None)
 Returns: data in file fname of type btype
@@ -966,7 +966,7 @@ is overwrite the destination file. Tries to figure out packtype from
 4th-to-last character in filename. Thus, the routine understands these
 file formats ...
 
-1bin=Int8, sbin=Int16, ibin=Int32, fbin=Float32, dbin=Float64, etc.
+1bin=Int8, sbin=int16, ibin=Int32, fbin=Float32, dbin=Float64, etc.
 
 Usage:  binput(outarray,filename,packtype=None,writetype='wb')
 """
@@ -974,10 +974,10 @@ Usage:  binput(outarray,filename,packtype=None,writetype='wb')
         packtype = fname[-4]
 
     # a speck of error checking
-    if packtype == N.Int16 and outarray.typecode() == 'f':
+    if packtype == N.int16 and outarray.typecode() == 'f':
         # check to see if there's data loss
         if max(N.ravel(outarray)) > 32767 or min(N.ravel(outarray))<-32768:
-            print "*** WARNING: CONVERTING FLOAT DATA TO OUT-OF RANGE INT16 DATA"
+            print "*** WARNING: CONVERTING FLOAT DATA TO OUT-OF RANGE int16 DATA"
     outdata = N.ravel(outarray).astype(packtype)
 
     # force the data on disk to be LittleEndian (for more efficient PC/Linux use)
@@ -1020,7 +1020,7 @@ Returns: None
                        'f':'f',  # Float0, Float8, Float16, Float32
                        'd':'f',  # Float64
                        '1':'b',  # Int0, Int8
-                       's':'',  # Int16
+                       's':'',  # int16
                        'i':'i',  # Int32
                        'l':'i'}  # Int
 

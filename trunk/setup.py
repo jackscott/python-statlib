@@ -10,18 +10,18 @@ if version < '2.2.3':
 
 setup( 
     name='statlib',
-    version='1.0',
+    version='1.0.1',
     description='A collection of statistical modules (stats.py, pstats.py, matfunc.py)',
     author='Raymond Hettinger, Gary Strangman',
     author_email='python@rcn.com, strang@nmr.mgh.harvard.edu',
     maintainer='Istvan Albert',
     maintainer_email='istvan.albert@gmail.com',
     url='http://python-statlib.googlecode.com/',
-    download_url="http://python-statlib.googlecode.com/files/statlib-1.0.tar.gz",
+    download_url="http://python-statlib.googlecode.com/files/statlib-1.0.1.tar.gz",
     packages = [ "statlib" ],
     classifiers=[
        'Development Status :: 5 - Production/Stable',
-       'License :: OSI Approved :: GNU General Public License (GPL)',
+       'License :: OSI Approved :: MIT License',
        'Programming Language :: Python',
        'Operating System :: OS Independent',
        'Intended Audience :: Developers',

@@ -1,8 +1,8 @@
 import os
 from statlib import stats, pstat
 reload(stats)
-import Numeric
-N=Numeric
+import numpy
+N=numpy
 
 l = range(1,21)
 lf = range(1,21)
@@ -160,7 +160,7 @@ print stats.friedmanchisquare(l,m,l)
 print stats.friedmanchisquare(a,b,a)
 
 print '\nANOVAs'
-execfile('test_anova.py')
+#execfile('test_anova.py')
 
 l = range(1,21)
 a = N.array(l)
