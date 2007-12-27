@@ -38,7 +38,7 @@ if __name__ == '__main__':
         figleaf.stop()
         figleaf.write_coverage('.figleaf')
         data = figleaf.get_data().gather_files()
-        annotate_html.report_as_html( data, 'html', [] )
+        annotate_html.report_as_html( data, 'cover-reports', [] )
     
     else:
         print 'Invalid mode %s' % mode
