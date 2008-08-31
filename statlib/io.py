@@ -60,9 +60,13 @@ except:
     pass
 
 import pstat
-import glob, re, string, types, os, numpy, struct, copy, time, tempfile, sys
+import glob, re, string, types, os, struct, copy, time, tempfile, sys
 from types import *
-N = numpy
+
+try:
+    import numpy as N
+except:
+    pass
 
 __version__ = 0.5
 
