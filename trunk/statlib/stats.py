@@ -918,7 +918,7 @@ def lspearmanr(x,y):
     ranky = rankdata(y)
     dsq = sumdiffsquared(rankx,ranky)
     rs = 1 - 6*dsq / float(n*(n**2-1))
-    t = rs * math.sqrt((n-2) / ((rs+1.0)*(1.0-rs)))
+    t = rs * math.sqrt((n-2) / ((rs+1.0+TINY)*(1.0-rs+TINY)))
     df = n-2
     probrs = betai(0.5*df,0.5,df/(df+t*t))  # t already a float
     # probability values for rs are from part 2 of the spearman function in
