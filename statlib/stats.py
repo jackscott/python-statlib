@@ -1000,7 +1000,7 @@ def llinregress(x,y):
     Usage:   llinregress(x,y)      x,y are equal-length lists of x-y coordinates
     Returns: slope, intercept, r, two-tailed prob, sterr-of-estimate
     """
-    TINY = 1.0e-20
+    TINY = 1.0e-15
     if len(x) <> len(y):
         raise ValueError, 'Input values not paired in linregress.  Aborting.'
     n = len(x)
@@ -1011,9 +1011,12 @@ def llinregress(x,y):
     r_num = float(n*(summult(x,y)) - sum(x)*sum(y))
     r_den = math.sqrt((n*ss(x) - square_of_sums(x))*(n*ss(y)-square_of_sums(y)))
     r = r_num / r_den
-    z = 0.5*math.log((1.0+r+TINY)/(1.0-r+TINY))
+    if (r - 1.0) < TINY: # fix for perfect correlation
+        r = r - TINY
+    a = (1.0+r)/(1.0-r)
+    z = 0.5*math.log((1.0+r)/(1.0-r))
     df = n-2
-    t = r*math.sqrt(df/((1.0-r+TINY)*(1.0+r+TINY)))
+    t = r*math.sqrt(df/((1.0-r)*(1.0+r)))
     prob = betai(0.5*df,0.5,df/(df+t*t))
     slope = r_num / float(n*ss(x) - square_of_sums(x))
     intercept = ymean - slope*xmean
